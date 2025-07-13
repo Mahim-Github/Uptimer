@@ -1,0 +1,332 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Round8";
+  src:
+    url("../fonts/round8-four-webfont.woff") format("woff"),
+    url("../fonts/round8-four-webfont.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Schabo";
+  src: url("../fonts/SCHABO-Condensed.woff"),
+    url("../fonts/SCHABO-Condensed.woff2");
+}
+
+@font-face {
+  font-family: "Dreams";
+  src: url("../fonts/BillionDreams_PERSONAL.ttf");
+}
+
+@font-face {
+  font-family: "Vlan";
+  src: url("../fonts/VLANÈLLA REGULAR.ttf"),
+    url("../fonts/VLANÈLLA BOLD.ttf.ttf"), url("../fonts/VLANÈLLA ITALIC.ttf"),
+    url("../fonts/VLANÈLLA ITALIC.ttf"), url("../fonts/VLANÈLLA OUTLINE.ttf"),
+    url("../fonts/VLANÈLLA SHADOW.ttf");
+}
+
+.vlan {
+  font-family: Vlan;
+}
+
+.dreams {
+  font-family: Dreams;
+}
+.round8 {
+  font-family: Round8;
+}
+
+.schabo {
+  font-family: Schabo;
+}
+
+::selection {
+  background: rgb(30, 30, 30);
+  color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.menu-bar {
+  transition: all 0.8s cubic-bezier(0.55, 0.03, 0, 1.06);
+}
+
+.team-name {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  display: flex;
+  white-space: no-wrap;
+  overflow: hidden;
+  bottom: 30px;
+}
+
+.menu-icon {
+  mix-blend-mode: difference;
+}
+
+.menu-a {
+  position: relative;
+}
+
+.menu-a::before {
+  content: "";
+  height: 3px;
+  width: 0px;
+  position: absolute;
+  bottom: 0px;
+  border-radius: 20px;
+  left: 0;
+  background-color: black;
+  transition: all 0.75s cubic-bezier(0.98, -0.04, 0.17, 0.69);
+}
+
+.menu-a:hover::before {
+  width: 100%;
+}
+
+.main-txt {
+  text-shadow: -3px 5px black;
+  color: white;
+  height: fit-content;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: black;
+}
+
+/* .hero-txt {
+  scale: 2;
+} */
+
+.hero {
+  position: relative; /* Ensure proper positioning for ScrollTrigger */
+  min-height: 100vh !important; /* Ensure the hero section is at least the viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Removed overflow: hidden; */
+}
+
+.section2 {
+  transform: translate(-17.75%, 0);
+}
+
+@keyframes upAndDown {
+  0% {
+    top: 45%;
+  }
+  50% {
+    top: 35%;
+  }
+  100% {
+    top: 45%;
+  }
+}
+
+.nic {
+  animation: upAndDown 3s ease-in-out infinite; /* Adjust duration and repetition as needed */
+}
+
+.styled-primary {
+  height: 100px;
+  width: 300px;
+  border-radius: 50px;
+  background-color: white;
+  border: 1.5px solid black;
+  cursor: pointer;
+  font-size: 50px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  font-family: schabo;
+  display: flex;
+  align-items: center;
+}
+
+.styled-primary::before {
+  content: "";
+  height: 100px;
+  width: 330px;
+  position: absolute;
+  top: 100%;
+  left: -5%;
+  background-color: black;
+  border-radius: 50%;
+  transition: all 0.85s cubic-bezier(0.55, 0.03, 0, 1.06);
+}
+
+.styled-primary:hover {
+  scale: 1.05;
+}
+
+.styled-primary:hover::before {
+  top: 0%;
+  border-radius: 50px;
+}
+
+.span-wrapper {
+  display: inline-block;
+  background-color: transparent;
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.span1,
+.span2 {
+  display: inline-block;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.35s ease-in-out;
+}
+
+.span1 {
+  top: 55%;
+  color: black;
+}
+
+.span2 {
+  top: 155%;
+  color: white;
+}
+
+.styled-primary:hover .span1 {
+  transform: translate(-50%, -105%);
+}
+
+.styled-primary:hover .span2 {
+  transform: translate(-50%, -110%);
+}
+
+.styled-primary2 {
+  height: 200px;
+  width: 600px;
+  border-radius: 100px;
+  background-color: white;
+  border: 1.5px solid black;
+  cursor: pointer;
+  font-size: 100px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  font-family: schabo;
+  display: flex;
+  align-items: center;
+}
+
+.styled-primary2::before {
+  content: "";
+  height: 200px;
+  width: 660px;
+  position: absolute;
+  top: 100%;
+  left: -5%;
+  background-color: black;
+  border-radius: 50%;
+  transition: all 0.85s cubic-bezier(0.55, 0.03, 0, 1.06);
+}
+
+.styled-primary2:hover {
+  scale: 1.05;
+}
+
+.styled-primary2:hover::before {
+  top: 0%;
+  border-radius: 50px;
+}
+
+.styled-primary2 .span-wrapper {
+  display: inline-block;
+  background-color: transparent;
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.span11,
+.span22 {
+  display: inline-block;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.35s ease-in-out;
+}
+
+.span11 {
+  top: 55%;
+  color: black;
+}
+
+.span22 {
+  top: 155%;
+  color: white;
+}
+
+.styled-primary2:hover .span11 {
+  transform: translate(-50%, -105%);
+}
+
+.styled-primary2:hover .span22 {
+  transform: translate(-50%, -110%);
+}
+
+/* INPUT */
+
+.input-wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.input-wrapper .input {
+  height: 100%;
+  width: 100%;
+  padding: 8px 16px;
+  border: 1px solid #9c9c9c;
+  border-radius: 5px;
+  outline: none;
+}
+
+.input-wrapper .input:focus + .label {
+  top: -5px;
+  left: 8px;
+}
+
+.input-wrapper .label {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translate(0%, -50%);
+  padding: 0 4px;
+  background-color: #fff;
+  font-size: 14px;
+  line-height: 1;
+  color: #3e3e3e;
+  transition: all 0.25s ease-in-out;
+}
+
+.signin-img {
+  background: url("../images/HOSPITAL.jpg");
+  background-size: cover;
+}
